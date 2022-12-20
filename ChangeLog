@@ -1,0 +1,91 @@
+Version 6.5.1 2017-11-26
+
+  - modified for qt5 and poppler-qt5
+
+Version 6.4.4 2014-10-21
+
+  - added a file-opening dialog to specify a chart file
+  - allow for creation of a new "null" prerex file
+
+Version 6.4.3 2014-10-17
+
+ - check that the xterm has started
+ - set xterm font size to 10pt
+ 
+Version 6.4.2 2012-05-30
+
+ - allow for Windows (rather than X11) clipboard function
+
+Version 6.4.1 2012-05-25
+
+ - restore FileSystemWatch path after reloading pdf (needed for Windows)
+
+Version 6.4.0 2012-04-13
+
+ - references to undeclared sleep() replaced by references to QThread::sleep()  
+   (debian bug 667331).
+
+Version 6.3.2 2012-03-30
+
+ - bump up version number to match prerex.sty and prerex
+
+Version 6.3.1 2011-12-22
+
+  If a file opening dialogue is used and a tex file is opened, the Working Directory 
+  for the prerex process is set to the directory of the tex file. 
+
+Version 6.3 2011-11-22
+
+  Right-clicking on a course box or arrow *appends* coordinates to the
+  clipboard (to simplify multiple deletes/shifts).
+
+Version 6.2 2011-09-08
+
+  no longer embedding the prerex editing window because of continuing focus issues
+
+Version 6.1.1 2011-08-20
+
+ - using grabKeyboard to avoid keyboard-focus issues
+ - bump up version number to match prerex.sty and prerex
+
+Version 6.0.1 2011-07-27
+
+ - modified FocusPolicy
+
+Version 6.0  2010-06-23
+
+ - files re-organized and distributed as a gzipped tarball
+
+Version 5.7  2010-04-06
+
+  - corrected coordinate calculations to use the image width/height rather than
+    the widget width/height (and allow for image offsets)
+
+Version 5.6  2010-03-26
+Version 5.5  2010-03-16
+ 
+  - re-named vprerex (visual prerex)
+  - opens prerex source files by embedding a prerex command-line window
+  - added Quit button to controls
+  - removed docking features from the controls widget 
+  - removed resizing from the statusbar
+
+  This is the first distributed version of vprerex; the version numbers are
+  starting at 5.5 to be compatible with the current version of prerex.
+
+  Derived from pdfviewer by
+
+    - excising all UI widgets except the Page spinner and the Scale selector
+
+    - adding URI tooltips and cursor-shape changes for links
+
+    - assigning box, edge, and background-point coordinates to the X clipboard 
+      when the user clicks on a box, edge mid-point, or background point, resp. 
+      (for a prerex chart with the coordinate grid enabled)
+   
+    - adding a file watcher to re-load the PDF when the file changes
+
+    - posting taskbar messages to identify the program version and the loaded file,
+      and inform the user that the PDF has been re-loaded
+
+

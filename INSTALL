@@ -1,0 +1,21 @@
+To install:
+
+  + You must have first installed the qt-5 and poppler libraries,
+    including the poppler-qt5 library. These may be available packaged
+    for your platform or the sources can be obtained from:
+
+http://qt.nokia.com/downloads/downloads#qt-lib
+http://poppler.freedesktop.org/
+
+  + Edit vprerex.pro so INCLUDEPATH and LIBS point to the 
+    relevant directories.
+
+  + qmake vprerex.pro (using the qt-5 qmake)
+
+  + make
+
+  + install the vprerex binary in a suitable directory such as
+    $HOME/bin or /usr/local/bin.
+
+If vprerex is applied to a LaTeX file, it calls xterm and the prerex
+editor.

@@ -1,0 +1,30 @@
+vprerex (visual prerex) is a GUI front-end and viewer for the prerex
+interactive editor of prerequisite-chart descriptions in the prerex
+format. The viewer may be used just as a minimalist viewer of arbitrary
+PDF files but supports editing of charts generated using prerex.sty by
+allowing coordinates of course boxes, arrows, and background points
+to be conveyed back to the prerex editor command-line using the X11
+clipboard.
+
+To install:
+
+  + You must have first installed the qt-5 and poppler libraries,
+    including the poppler-qt5 library. These may be available packaged
+    for your platform or the sources can be obtained from:
+
+http://qt.nokia.com/downloads/downloads#qt-lib
+http://poppler.freedesktop.org/
+
+  + Edit vprerex.pro so INCLUDEPATH and LIBS point to the 
+    relevant directories.
+
+  + qmake vprerex.pro (using the qt-4 qmake)
+
+  + make
+
+  + install the vprerex binary in a suitable directory such as
+    $HOME/bin or /usr/local/bin.
+
+If vprerex is applied to a LaTeX file, it calls xterm and the prerex
+editor.
+

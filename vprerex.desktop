@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Vprerex
+Comment=Edit Prerequisite Charts
+Exec=vprerex 
+Icon=vprerex
+MimeType=application/pdf;application/x-tex
+Terminal=false
+Type=Application
+Categories=Graphics;

@@ -1,0 +1,107 @@
+.TH VPREREX 1 2017-11-26 "vprerex-6.5.1" ""
+.SH NAME
+.BR vprerex 
+\- graphical front-end and viewer for the 
+.BR prerex (1)
+prerequisite-chart editor
+.SH SYNOPSIS
+.BR vprerex 
+.IR  basefile [ .tex  ] 
+[ 
+.IR chartfile [ .tex ] 
+] 
+.PP
+.BR vprerex
+.IR file.pdf
+.PP 
+.BR vprerex
+.SH DESCRIPTION
+.B vprerex 
+(visual prerex) is a GUI front-end and viewer for the
+.BR prerex (1)
+interactive editor
+of prerequisite-chart descriptions in the
+.BR prerex (5)
+format.
+The viewer may be used just as a minimalist viewer of arbitrary PDF files  but
+supports editing of charts 
+generated using
+.BR prerex.sty (7)
+by allowing coordinates of course boxes, arrows,
+and background points to be conveyed back to the 
+.BR prerex (1)
+command-line using the clipboard.
+.SH USAGE
+If 
+.B vprerex
+is invoked on a PDF file, it simply displays that file.
+.PP
+If the (first) argument 
+does 
+.I not 
+have the .pdf
+suffix, it is assumed to be the base file for an existing LaTeX document
+containing a prerequisite-chart description 
+in
+.BR prerex (5)
+format, to be edited using
+.BR prerex (1).
+If a 
+.I second
+argument
+is supplied, it is regarded as an included file containing
+the specific chart environment to be edited.
+.PP
+If 
+.I no
+arguments are supplied, a file-opening dialog
+allows the user the specify the 
+.BR prerex (1)
+base file
+to be edited (or the PDF file to be viewed). 
+A second file-opening dialog allows a chart file to be specified.
+.PP
+To create an initial "empty" chart, cancel the file-opening dialogue,
+select a working directory, and enter a file name.
+.PP
+If the mouse hovers over a hyperlink in the PDF viewing window, the cursor shape will
+change to a pointing finger and a tooltip will display the URI.
+If the PDF file displayed contains 
+a chart generated using
+.BR prerex.sty (7)
+and the background coordinate grid has been enabled, 
+left-clicking the mouse on a course box, arrow mid-point, or background point
+will load the relevant coordinates 
+into the clipboard; right-clicking the mouse on a course box or arrow will
+.I append 
+the relevant coordinates to the clipboard.
+The cursor shape changes to a plus-sign to indicate
+successful capture of the coordinates.
+Middle-clicking (or, in a Windows shell with "Quick Edit" mode enabled, right-clicking) the mouse at the
+.BR prerex (1)
+command-line will then paste those coordinates into a command being composed.
+If the chart file is regenerated,
+the updated document will be re-loaded.
+.SH DEPENDENCIES
+.B vprerex-6.5
+is based on the qt-5 and poppler libraries. It
+calls
+.BR xterm (1)
+and
+.BR prerex (1)
+for the editing window and
+uses 
+.BR poppler-qt5
+for rendering PDF files. 
+If an X server isn't running or there is no xterm application, the prerex editor can be
+started separately.
+.SH AUTHOR
+R. D. Tennent (rdt@cs.queensu.ca), adapted from David Boddie's PDFviewer, described in the QT Quarterly:
+.B http://doc.trolltech.com/qq/QtQuarterly27.pdf.
+.SH SEE ALSO
+.BR prerex (1),
+.BR prerex (5),
+.BR prerex.sty (7),
+and
+.BR xterm (1).
+

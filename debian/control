@@ -1,0 +1,34 @@
+Source: vprerex
+Section: tex
+Priority: optional
+Maintainer: Ryan Kavanagh <rak@debian.org>
+Build-Depends: debhelper (>= 11)
+ , dpkg-dev (>= 1.16.1~)
+ , libpoppler-qt5-dev
+ , pkg-config
+ , qtbase5-dev
+Standards-Version: 4.1.3
+Homepage: http://www.ctan.org/tex-archive/graphics/prerex
+Vcs-Git: https://anonscm.debian.org/git/collab-maint/prerex.git
+Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/prerex.git/
+
+Package: vprerex
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ prerex,
+ xterm
+Description: Qt interface to prerex, a course prerequisite chart editor
+ vprerex provides a Qt interface to prerex by integrating the prerex editor
+ with a PDF viewer. This allows conveying coordinates of course boxes, arrows
+ and background points back to prerex through the use of the clipboard.
+ .
+ prerex is an editor for creating esthetically pleasing course prerequisite
+ charts using the TikZ LaTeX package.
+ .
+ Course prerequisite charts allow students to easily determine which
+ prerequisites, corequisites and recommended prerequisites they need for a
+ given course and their time slots. Course prerequisite charts also highlight
+ the courses required by a degree.
+ .
+ prerex is used by departments in several universities, including Queen's
+ University and Suffolk University.
